@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-// Step 1: Define NutritionPlan class
 class NutritionPlan {
     private int caloricIntake;
     private int carbohydratesRatio;
@@ -12,10 +11,10 @@ class NutritionPlan {
     private String fitnessGoal;
     private List<String> dietaryRestrictions;
 
-    // Constructor
+
     public NutritionPlan() {}
 
-    // Getters and setters
+
     public int getCaloricIntake() {
         return caloricIntake;
     }
@@ -74,7 +73,7 @@ class NutritionPlan {
 
 }
 
-// Step 2: Define NutritionPlanBuilder class
+
 class NutritionPlanBuilder {
     private NutritionPlan nutritionPlan;
 
@@ -114,7 +113,7 @@ class NutritionPlanBuilder {
     }
 }
 
-// Step 3: Define NutritionPlanDirector class
+
 class NutritionPlanDirector {
     private NutritionPlanBuilder builder;
 
@@ -132,16 +131,15 @@ class NutritionPlanDirector {
     }
 }
 
-// Example usage
+
 public class ass4 {
     public static void main(String[] args) {
         NutritionPlanDirector director = new NutritionPlanDirector();
 
-        // Use WeightLossNutritionPlanBuilder
+      
         director.setBuilder(new WeightLossNutritionPlanBuilder());
         NutritionPlan nutritionPlan = director.createNutritionPlan();
 
-        // Accessing the nutrition plan attributes
         System.out.println("Caloric Intake: " + nutritionPlan.getCaloricIntake());
         System.out.println("Meal Plans: " + nutritionPlan.getMealPlans());
         System.out.println("Fitness Goal: " + nutritionPlan.getFitnessGoal());
